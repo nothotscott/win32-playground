@@ -1,5 +1,5 @@
 param (
-	[switch]$build = $true,
+	[switch]$build = $true,	# -build:$false for nobuild
 	[switch]$run = $false
 )
 
@@ -11,7 +11,7 @@ if (!(test-path $OUTPUT)) {
 cd $OUTPUT
 
 if($build) {
-	cmake -G Ninja ../
+	cmake -G Ninja --build ../
 	ninja all
 }
 if($run) {

@@ -6,6 +6,8 @@ project(Win32HelloWorld)
 set(CMAKE_C_COMPILER cl)
 set(CMAKE_CXX_COMPILER cl)
 set(CMAKE_LINKER link)
+set(CMAKE_MC_COMPILER mc)
+set(CMAKE_RC_COMPILER rc)
 
 file(GLOB PROJ_SOURCES src/*.c)
 
