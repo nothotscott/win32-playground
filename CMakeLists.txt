@@ -7,4 +7,6 @@ set(CMAKE_C_COMPILER cl)
 set(CMAKE_CXX_COMPILER cl)
 set(CMAKE_LINKER link)
 
-add_executable(Win32HelloWorld WIN32 src/main.c)
+file(GLOB PROJ_SOURCES src/*.c)
+
+add_executable(${CMAKE_PROJECT_NAME} WIN32 ${PROJ_SOURCES})
