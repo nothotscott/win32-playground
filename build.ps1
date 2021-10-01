@@ -1,10 +1,21 @@
-$BUILD = "build"
+param (
+	[switch]$build = $true,
+	[switch]$run = $false
+)
 
-if (!(test-path $BUILD)) {
-	md $BUILD
+$OUTPUT = "build"
+
+if (!(test-path $OUTPUT)) {
+	md $OUTPUT
 }
-cd $BUILD
-cmake -G Ninja ../
-ninja all
+cd $OUTPUT
+
+if($build) {
+	cmake -G Ninja ../
+	ninja all
+}
+if($run) {
+	Start-Process Win32HelloWorld
+}
 
 cd ../
