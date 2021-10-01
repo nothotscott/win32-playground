@@ -11,4 +11,9 @@ set(CMAKE_RC_COMPILER rc)
 
 file(GLOB PROJ_SOURCES src/*.c)
 
+add_compile_options(
+	"$<$<CONFIG:Debug>:/MTd>"
+	"$<$<CONFIG:RelWithDebInfo>:/MT>"
+)
+
 add_executable(${CMAKE_PROJECT_NAME} WIN32 ${PROJ_SOURCES})
