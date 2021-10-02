@@ -1,7 +1,7 @@
 param (
-	[switch]$clean = $false,	# -clean:$true for clean
-	[switch]$build = $true,		# -build:$false for no-build
-	[switch]$run = $false		# -clean:$true for run
+	[switch]$clean = $false,
+	[switch]$build = $true,
+	[switch]$run = $false
 )
 
 $OUTPUT = "build"
