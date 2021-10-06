@@ -19,7 +19,7 @@ if($build) {
 	ninja all
 }
 if($run) {
-	Start-Process Win32HelloWorld
+	Start-Process -Wait Win32HelloWorld
 }
 
 cd ../
